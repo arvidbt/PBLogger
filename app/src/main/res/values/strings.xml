@@ -1,0 +1,58 @@
+<resources>
+    <string name="app_name">pblogger</string>
+    <string name="SQUAT_BTN">SQUAT</string>
+    <string name="LOG_PR_BTN">LOG PR</string>
+    <string name="PREF_KEY">se.umu.cs.dv20arn.pblogger</string>
+    <string name="SQUAT_KEY">se.umu.cs.dv20arn.pblogger.SQUAT</string>
+    <string name="SQUAT_WEIGHT_KEY">se.umu.cs.dv20arn.pblogger.SQUAT_WEIGHT</string>
+    <string name="BENCHPRESS_KEY">se.umu.cs.dv20arn.pblogger.BENCHPRESS</string>
+    <string name="BENCHPRESS_WEIGHT_KEY">se.umu.cs.dv20arn.pblogger.BENCHPRESS_WEIGHT</string>
+    <string name="DEADLIFT_KEY">se.umu.cs.dv20arn.pblogger.DEADLIFT</string>
+    <string name="DEADLIFT_WEIGHT_KEY">se.umu.cs.dv20arn.pblogger.DEADLIFT_WEIGHT</string>
+    <string name="SAVE_PB">SAVE PB</string>
+    <string name="weight_edit_text">Weight</string>
+    <string name="DEADLIFT_BTN_TEXT">DEADLIFT</string>
+    <string name="BENCHPRESS_BTN_TEXT">BENCHPRESS</string>
+    <string name="SQUAT_VIDEO_KEY">NO-VIDEO-ATTACHED</string>
+    <string name="DEADLIFT_VIDEO_KEY">NO-VIDEO-ATTACHED</string>
+    <string name="BENCHPRESS_VIDEO_KEY">NO-VIDEO-ATTACHED</string>
+    <string name="SQUAT_VIDEO_ID_KEY">se.umu.cs.dv20arn.pblogger.SQUAT_VIDEO_ID</string>
+    <string name="BENCHPRESS_VIDEO_ID_KEY">se.umu.cs.dv20arn.pblogger.BENCHPRESS_VIDEO_ID</string>
+    <string name="DEADLIFT_VIDEO_ID_KEY">se.umu.cs.dv20arn.pblogger.DEADLIFT_VIDEO_ID</string>
+    <string name="PB_LOGGED_KEY">se.umu.cs.dv20arn.pblogger.PBLOGGED</string>
+    <string name="DEFAULT_MSG">NOT LOGGED</string>
+    <string name="USER_WILKS_KEY">"se.umu.se.dv20arn.pblogger.WILKS"</string>
+    <string name="USER_BODYWEIGHT_KEY">"se.umu.se.dv20arn.pblogger.BODYWEIGHT"</string>
+    <string name="USER_GENDER_KEY">x"se.umu.se.dv20arn.pblogger.GENDER</string>
+
+
+    <string-array name="GENDERS">
+        <item>MALE</item>
+        <item>FEMALE</item>
+    </string-array>
+
+    <string-array name="LIFTS">
+        <item>SQUAT</item>
+        <item>BENCHPRESS</item>
+        <item>DEADLIFT</item>
+    </string-array>
+    <string name="title_activity_view_entry">ViewEntryActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="RECORD_VIDEO_TEXT">Attach Video</string>
+    <string name="REPLAY_VIDEO_BTN">REPLAY</string>
+    <string name="CALC_WILKS">CALCULATE WILKS</string>
+    <string name="CALC_1RM">CALCULATE 1RM</string>
+    <string name="NR_PB_LOGGED">0</string>
+    <string name="SETTINGS_TEXT">SETTINGS</string>
+    <string name="CALC_1RM_BTN">CALCULATE \n 1RM</string>
+    <string name="ADD_PB">Add PB</string>
+    <string name="VIEW">VIEW</string>
+    <string name="_95">0</string>
+</resources>
