@@ -21,9 +21,13 @@
     <string name="DEADLIFT_VIDEO_ID_KEY">se.umu.cs.dv20arn.pblogger.DEADLIFT_VIDEO_ID</string>
     <string name="PB_LOGGED_KEY">se.umu.cs.dv20arn.pblogger.PBLOGGED</string>
     <string name="DEFAULT_MSG">NOT LOGGED</string>
-    <string name="USER_WILKS_KEY">"se.umu.se.dv20arn.pblogger.WILKS"</string>
-    <string name="USER_BODYWEIGHT_KEY">"se.umu.se.dv20arn.pblogger.BODYWEIGHT"</string>
-    <string name="USER_GENDER_KEY">x"se.umu.se.dv20arn.pblogger.GENDER</string>
+    <string name="USER_WILKS_KEY">se.umu.se.dv20arn.pblogger.WILKS"</string>
+    <string name="USER_BODYWEIGHT_KEY">se.umu.se.dv20arn.pblogger.BODYWEIGHT"</string>
+    <string name="USER_GENDER_KEY">se.umu.se.dv20arn.pblogger.GENDER</string>
+    <string name="TOTAL_SQUAT_GAINED_KEY">se.umu.se.dv20arn.pblogger.SQUAT_GAINED</string>
+    <string name="TOTAL_DEADLIFT_GAINED_KEY">se.umu.se.dv20arn.pblogger.DEADLIFT_GAINED</string>
+    <string name="TOTAL_BENCHPRESS_GAINED_KEY">se.umu.se.dv20arn.pblogger.BENCHPRESS_GAINED</string>
+    <string name="RESTORE_VIDEO_KEY">se.umu.se.dv20arn.pblogger.RESTORE_VIDEO</string>
 
 
     <string-array name="GENDERS">

@@ -21,7 +21,9 @@ class Calculator() {
     private val ff = -9.054E-08
 
 
-
+    /**
+     * Calculates Wilks and returns score, based on gender.
+     */
     fun calculateWilks(gender:String, bodyweight: Int, weightLifted: Int): Int {
         val bw = bodyweight.toDouble()
         if(gender == "MALE" && bodyweight > 0 && weightLifted > 0) {
@@ -32,6 +34,9 @@ class Calculator() {
         return 0
     }
 
+    /**
+     *  Calculates Wilks Formula.
+     */
     private fun wilksFormula(a:Double,
                              b:Double,
                              c:Double,

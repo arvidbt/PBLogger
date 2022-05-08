@@ -48,12 +48,18 @@ class Main : AppCompatActivity() {
     }
 
 
+    /**
+     * Get permissions on first start to access memory for video.
+     */
     private fun getPermissions() {
         if(ContextCompat.checkSelfPermission(this, android.Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
             requestStoragePermission()
         }
     }
 
+    /**
+     * Handles the alert for requesting permission.
+     */
     private fun requestStoragePermission() {
         if(ActivityCompat.shouldShowRequestPermissionRationale(this, android.Manifest.permission.READ_EXTERNAL_STORAGE)) {
             AlertDialog.Builder(this)
@@ -86,30 +92,53 @@ class Main : AppCompatActivity() {
         }
     }
 
+    /**
+     * Launches settingsActivity.
+     */
     private fun onOpenSettings() {
         binding.SETTINGSBTN.setOnClickListener {
             startActivity(Intent(this, SettingsActivity::class.java))
         }
     }
 
+    /**
+     * Updates UI.
+     */
     private fun onUpdate() {
-        binding.SQUATWEIGHTTEXT.text = sharedPref.getInt(keys.SQUAT_WEIGHT_KEY, 0).toString()
-        binding.BENCHPRESSWEIGHTTEXT.text = sharedPref.getInt(keys.BENCHPRESS_WEIGHT_KEY, 0).toString()
-        binding.DEADLIFTWEIGHTTEXT.text = sharedPref.getInt(keys.DEADLIFT_WEIGHT_KEY, 0).toString()
+        binding.SQUATWEIGHT.text = sharedPref.getInt(keys.SQUAT_WEIGHT_KEY, 0).toString()
+        binding.BENCHPRESSWEIGHT.text = sharedPref.getInt(keys.BENCHPRESS_WEIGHT_KEY, 0).toString()
+        binding.DEADLIFTWEIGHT.text = sharedPref.getInt(keys.DEADLIFT_WEIGHT_KEY, 0).toString()
         binding.PB.text = sharedPref.getInt(keys.PB_LOGGED_KEY, 0).toString()
-        //binding.WILKS.text = sharedPref.getInt(keys.WILKS_SCORE, 0)
         if(totalWeightLifted() > 0) {
-            println("heh")
             binding.WILKS.text = calculateNewWilks()
         }
+        updateGains()
     }
 
+    /**
+     * Updates users gained weight in lifts.
+     */
+    private fun updateGains() {
+        val squat = sharedPref.getInt(keys.TOTAL_SQUAT_GAINED_KEY, 0).toString()
+        val deadlift = sharedPref.getInt(keys.TOTAL_DEADLIFT_GAINED_KEY, 0).toString()
+        val benchpress = sharedPref.getInt(keys.TOTAL_BENCHPRESS_GAINED_KEY, 0).toString()
+        "+ $squat KG".also { binding.SQUATGAINED.text = it }
+        "+ $deadlift KG".also { binding.DEADLIFTGAINED.text = it }
+        "+ $benchpress KG".also { binding.BENCHGAINED.text = it }
+    }
+
+    /**
+     * Get total amount of kilos user has lifted.
+     */
     private fun totalWeightLifted(): Int {
         return sharedPref.getInt(keys.SQUAT_WEIGHT_KEY, 0) +
                 sharedPref.getInt(keys.BENCHPRESS_WEIGHT_KEY, 0) +
                 sharedPref.getInt(keys.DEADLIFT_WEIGHT_KEY, 0)
     }
 
+    /**
+     * Calculates Wilks and returns it as string.
+     */
     private fun calculateNewWilks(): String {
         return Calculator().calculateWilks(
             sharedPref.getString(keys.USER_GENDER_KEY, "MALE").toString(),
@@ -127,40 +156,21 @@ class Main : AppCompatActivity() {
         }
     }
 
-    private fun viewEntry(lift:String) {
-        val intent = Intent(this, ViewEntryActivity::class.java)
-        if(loggedPBExists(lift)) {
-            intent.putExtra("TYPE_OF_LIFT", lift)
-            startActivity(intent)
-        } else {
-            makeToast("NO PB LOGGED FOR $lift!")
-        }
-    }
+
 
     /***
      * Updates the squat entry.
      */
     private fun onViewEntry() {
-        binding.SQUATBTN.setOnClickListener {
-            viewEntry("SQUAT")
+        binding.PREVIEWPRVIDEO.setOnClickListener {
+            startActivity(Intent(this, ViewEntryActivity::class.java))
         }
-        binding.DEADLIFTBTN.setOnClickListener {
-            viewEntry("DEADLIFT")
-        }
-        binding.BENCHPRESSBTN.setOnClickListener {
-            viewEntry("BENCHPRESS")
-        }
+
     }
 
-    private fun loggedPBExists(lift: String): Boolean{
-        when(lift) {
-            "SQUAT" -> return sharedPref.getInt(keys.SQUAT_WEIGHT_KEY, 0) != 0
-            "DEADLIFT" -> return sharedPref.getInt(keys.DEADLIFT_WEIGHT_KEY, 0) != 0
-            "BENCHPRESS" -> return sharedPref.getInt(keys.BENCHPRESS_WEIGHT_KEY, 0) != 0
-        }
-        return false
-    }
-
+    /**
+     * Generic method for making toasts.
+     */
     private fun makeToast(message: String) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }

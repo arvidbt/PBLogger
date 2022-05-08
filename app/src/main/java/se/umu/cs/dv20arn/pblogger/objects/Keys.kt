@@ -20,8 +20,11 @@ class Keys {
     val BENCHPRESS_VIDEO_ID_KEY = R.string.BENCHPRESS_VIDEO_ID_KEY.toString()
     val DEADLIFT_VIDEO_ID_KEY = R.string.DEADLIFT_VIDEO_ID_KEY.toString()
     val PB_LOGGED_KEY = R.string.PB_LOGGED_KEY.toString()
-    var USER_WILKS_KEY = R.string.USER_WILKS_KEY.toString()
     var USER_GENDER_KEY = R.string.USER_GENDER_KEY.toString()
     var USER_BW_KEY = R.string.USER_BODYWEIGHT_KEY.toString()
     var DEFAULT_MSG = R.string.DEFAULT_MSG.toString()
+    var TOTAL_SQUAT_GAINED_KEY =R.string.TOTAL_SQUAT_GAINED_KEY.toString()
+    var TOTAL_DEADLIFT_GAINED_KEY = R.string.TOTAL_DEADLIFT_GAINED_KEY.toString()
+    var TOTAL_BENCHPRESS_GAINED_KEY = R.string.TOTAL_BENCHPRESS_GAINED_KEY.toString()
+    var RESTORE_VIDEO_KEY = R.string.RESTORE_VIDEO_KEY.toString()
 }

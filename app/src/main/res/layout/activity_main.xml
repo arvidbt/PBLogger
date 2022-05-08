@@ -5,350 +5,573 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/gray"
+    android:background="@color/SECONDARY"
     tools:context=".Main">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/TOP_PANEL"
-        android:layout_width="417dp"
+        android:layout_width="match_parent"
         android:layout_height="78dp"
-        app:cardBackgroundColor="@color/white"
         app:cardCornerRadius="0dp"
-        app:cardElevation="0dp"
+        app:cardElevation="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.004" />
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/lol"
-        android:layout_width="354dp"
-        android:layout_height="130dp"
-        app:cardBackgroundColor="#464948"
-        app:cardCornerRadius="25dp"
-        app:cardElevation="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.482"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.216">
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/WILKS_CARD"
-            android:layout_width="match_parent"
-            android:layout_height="52dp"
-            app:cardBackgroundColor="#DF3F3F"
-            app:cardCornerRadius="25dp"
-            app:cardElevation="0dp">
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <TextView
-                    android:id="@+id/WILKS_TEXT"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:layout_marginStart="60dp"
-                    android:layout_marginTop="10dp"
-                    android:text="WILKS"
-                    android:textColor="#FFFFFF"
-                    android:textSize="24sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/PB_TEXT"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="60dp"
-                    android:text="PBs"
-                    android:textColor="#FFFFFF"
-                    android:textSize="24sp"
-                    android:textStyle="bold" />
-            </RelativeLayout>
-        </androidx.cardview.widget.CardView>
+        app:layout_constraintVertical_bias="0.001">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="@color/MAIN">
+
 
             <TextView
-                android:id="@+id/WILKS"
+                android:id="@+id/PB_LOGO"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
                 android:layout_centerInParent="true"
-                android:layout_marginStart="70dp"
-                android:layout_marginTop="70dp"
-                android:text="0"
-                android:textColor="#FFFFFF"
-                android:textSize="24sp"
-                android:textStyle="bold" />
+                android:layout_marginStart="20dp"
+                android:text="PB"
+                android:textColor="@color/ACCENT"
+                android:textSize="36sp" />
 
             <TextView
-                android:id="@+id/PB"
+                android:id="@+id/LOGGER"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="70dp"
+                android:fontFamily="sans-serif-black"
+                android:text="LOGGER"
+                android:textColor="@color/TEXTCOLOR"
+                android:textSize="36sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="140dp"
+                android:layout_marginBottom="14dp"
+                app:srcCompat="@drawable/icons8_barbell_48__"
+                app:tint="@color/ACCENT" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/lol"
+        android:layout_width="390dp"
+        android:layout_height="85dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.518"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.17">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/MAIN">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/WILKS_CARD"
+                android:layout_width="170dp"
+                android:layout_height="60dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="15dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="0dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/ACCENT">
+
+
+                    <TextView
+                        android:id="@+id/WILKS_TEXT"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:fontFamily="sans-serif-black"
+                        android:text="WILKS"
+                        android:textColor="@color/TEXTCOLOR"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/SCORE_TEXT"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginBottom="13dp"
+                        android:fontFamily="sans-serif-black"
+                        android:text="SCORE"
+                        android:textColor="@color/TEXTCOLOR"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/WILKS"
+                        android:layout_width="56dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="60dp"
+                        android:fontFamily="sans-serif-black"
+                        android:text="0"
+                        android:textColor="@color/HIGHLIGHT_TEXT"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="11dp"
+                        android:layout_marginTop="13dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:srcCompat="@drawable/ic_baseline_trending_up_24"
+                        app:tint="@color/TROPHY" />
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/PB_CARD"
+                android:layout_width="170dp"
+                android:layout_height="60dp"
                 android:layout_alignParentEnd="true"
                 android:layout_centerInParent="true"
-                android:layout_marginTop="70dp"
-                android:layout_marginEnd="80dp"
-                android:text="0"
-                android:textColor="#FFFFFF"
-                android:textSize="24sp"
-                android:textStyle="bold" />
+                android:layout_marginEnd="15dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="0dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/ACCENT">
+
+
+                    <TextView
+                        android:id="@+id/PB_TEXT"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="37dp"
+                        android:fontFamily="sans-serif-black"
+                        android:text="PBs"
+                        android:textColor="@color/TEXTCOLOR"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/PB_TEXT2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginBottom="13dp"
+                        android:fontFamily="sans-serif-black"
+                        android:text="BROKEN"
+                        android:textColor="@color/TEXTCOLOR"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/PB"
+                        android:layout_width="45dp"
+                        android:layout_height="31dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="60dp"
+                        android:fontFamily="sans-serif-black"
+                        android:text="0"
+                        android:textColor="@color/HIGHLIGHT_TEXT"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="123dp"
+                        android:backgroundTint="#CD0000"
+                        app:srcCompat="@drawable/ic_baseline_emoji_events_24"
+                        app:tint="@color/TROPHY" />
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
 
         </RelativeLayout>
 
     </androidx.cardview.widget.CardView>
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/LOG_NEW_PR"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#DF3F3F"
-        android:clickable="true"
-        android:contentDescription="@string/ADD_PB"
-        android:focusable="true"
-        app:backgroundTint="#464948"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.836"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.93"
-        app:srcCompat="@android:drawable/ic_input_add" />
-
     <androidx.cardview.widget.CardView
         android:id="@+id/CARD_1"
-        android:layout_width="354dp"
-        android:layout_height="286dp"
-        app:cardBackgroundColor="#464948"
-        app:cardCornerRadius="25dp"
+        android:layout_width="390dp"
+        android:layout_height="360dp"
+        app:cardCornerRadius="5dp"
         app:cardElevation="0dp"
-
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintHorizontal_bias="0.538"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.700">
+        app:layout_constraintVertical_bias="0.65">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-
-            <Button
-                android:id="@+id/SQUAT_BTN"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginTop="70dp"
-                android:layout_marginEnd="20dp"
-                android:backgroundTint="@color/red"
-                android:text="@string/VIEW"
-                android:textColor="@color/white"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
-            <Button
-                android:id="@+id/DEADLIFT_BTN"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
-                android:layout_centerInParent="true"
-                android:layout_marginEnd="20dp"
-                android:layout_marginBottom="70dp"
-                android:backgroundTint="@color/red"
-                android:text="@string/VIEW"
-                android:textColor="@color/white"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
-            <Button
-                android:id="@+id/BENCHPRESS_BTN"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_centerInParent="true"
-                android:layout_marginEnd="20dp"
-                android:backgroundTint="@color/red"
-                android:text="@string/VIEW"
-                android:textColor="@color/white"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
+            android:layout_height="match_parent"
+            android:background="@color/MAIN">
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/TOP_CARD_PANEL"
-                android:layout_width="match_parent"
-                android:layout_height="52dp"
-                app:cardBackgroundColor="#DF3F3F"
-                app:cardCornerRadius="25dp"
-                app:cardElevation="0dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.251"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.023">
+                android:layout_width="350dp"
+                android:layout_height="75dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="75dp"
+                app:cardCornerRadius="10dp">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:background="@color/ACCENT">
 
                     <TextView
-                        android:id="@+id/textView"
+                        android:id="@+id/SQUAT_WEIGHT"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerInParent="true"
-                        android:text="YOUR PBs"
-                        android:textColor="#FFFFFF"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="110dp"
+                        android:fontFamily="sans-serif-black"
+                        android:text="0"
+                        android:textColor="@color/HIGHLIGHT_TEXT"
                         android:textSize="24sp"
                         android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/SQUAT"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerInParent="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginStart="74dp"
+                        android:layout_marginBottom="23dp"
+                        android:fontFamily="sans-serif-black"
+                        android:text="SQUAT"
+                        android:textColor="@color/TEXTCOLOR"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/SQUAT_GAINED"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="28dp"
+                        android:layout_marginEnd="10dp"
+                        android:text="+ 0 KG"
+                        android:textColor="@color/FIRE"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/imageView9"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginTop="14dp"
+                        app:srcCompat="@drawable/icons8_squats_48__"
+                        app:tint="@color/HIGHLIGHT_TEXT" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="350dp"
+                android:layout_height="75dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="265dp"
+                app:cardCornerRadius="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/ACCENT">
+
+                    <TextView
+                        android:id="@+id/BENCHPRESS_WEIGHT"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="110dp"
+                        android:fontFamily="sans-serif-black"
+                        android:text="0"
+                        android:textColor="@color/HIGHLIGHT_TEXT"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/BENCHPRESS"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginStart="73dp"
+                        android:layout_marginBottom="26dp"
+                        android:fontFamily="sans-serif-black"
+                        android:text="BENCHPRESS"
+                        android:textColor="@color/TEXTCOLOR"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/BENCH_GAINED"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="27dp"
+                        android:layout_marginEnd="10dp"
+                        android:text="+ 0 KG"
+                        android:textColor="@color/FIRE"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginTop="14dp"
+                        app:srcCompat="@drawable/icons8_bench_press_48__"
+                        app:tint="@color/HIGHLIGHT_TEXT"/>
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="350dp"
+                android:layout_height="75dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="170dp"
+                app:cardCornerRadius="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/ACCENT">
+
+                    <TextView
+                        android:id="@+id/DEADLIFT_WEIGHT"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="110dp"
+                        android:fontFamily="sans-serif-black"
+                        android:text="0"
+                        android:textColor="@color/HIGHLIGHT_TEXT"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/DEADLIFT"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginStart="74dp"
+                        android:layout_marginBottom="25dp"
+                        android:fontFamily="sans-serif-black"
+                        android:text="DEADLIFT"
+                        android:textColor="@color/TEXTCOLOR"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/DEADLIFT_GAINED"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="27dp"
+                        android:layout_marginEnd="10dp"
+                        android:text="+ 0 KG"
+                        android:textColor="@color/FIRE"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginTop="14dp"
+                        app:srcCompat="@drawable/icons8_deadlift_48__"
+                        app:tint="@color/HIGHLIGHT_TEXT" />
+
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
 
             <TextView
-                android:id="@+id/SQUAT_TEXT"
+                android:id="@+id/textView15"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="85dp"
+                android:layout_marginStart="103dp"
+                android:layout_marginTop="37dp"
                 android:fontFamily="sans-serif-black"
-                android:text="SQUAT "
-                android:textColor="#FFFFFF"
-                android:textSize="20sp"
+                android:text="LIFT"
+                android:textColor="@color/TEXTCOLOR"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/DEADLIFT_TEXT"
+                android:id="@+id/textView17"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="20dp"
-                android:layout_marginBottom="85dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="206dp"
+                android:layout_marginTop="26dp"
                 android:fontFamily="sans-serif-black"
-                android:text="DEADLIFT "
-                android:textColor="#FFFFFF"
-                android:textSize="20sp"
+                android:text="CURRENT\nPB"
+                android:textColor="@color/TEXTCOLOR"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/BENCH_TEXT"
+                android:id="@+id/textView18"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
-                android:layout_centerInParent="true"
-                android:layout_marginStart="20dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="304dp"
+                android:layout_marginTop="25dp"
                 android:fontFamily="sans-serif-black"
-                android:text="BENCHPRESS "
-                android:textColor="#FFFFFF"
-                android:textSize="20sp"
+                android:text="+ SINCE\n   START"
+                android:textColor="@color/TEXTCOLOR"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/SQUAT_WEIGHT_TEXT"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_marginTop="85dp"
-                android:layout_marginEnd="135dp"
-                android:fontFamily="sans-serif-black"
-                android:text="0"
-                android:textColor="#DF3F3F"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/BENCHPRESS_WEIGHT_TEXT"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_centerInParent="true"
-                android:layout_marginEnd="135dp"
-                android:fontFamily="sans-serif-black"
-                android:text="0"
-                android:textColor="#DF3F3F"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/DEADLIFT_WEIGHT_TEXT"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginEnd="135dp"
-                android:layout_marginBottom="85dp"
-                android:fontFamily="sans-serif-black"
-                android:text="0"
-                android:textColor="#DF3F3F"
-                android:textSize="20sp"
-                android:textStyle="bold" />
 
         </RelativeLayout>
-
     </androidx.cardview.widget.CardView>
 
-    <TextView
-        android:id="@+id/LOG_LOG"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="LOGGER"
-        android:textColor="@color/red"
-        android:textSize="48sp"
-        android:textStyle="bold"
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="413dp"
+        android:layout_height="125dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.347"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023" />
+        app:layout_constraintStart_toStartOf="parent">
 
-    <TextView
-        android:id="@+id/PB_LOG"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="PB"
-        android:textColor="@color/red"
-        android:textSize="48sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.031"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023" />
 
-    <Button
-        android:id="@+id/SETTINGS_BTN"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/red"
-        android:text="USER SETTINGS"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.183"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.931" />
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/LOG_NEW_PR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/ACCENT"
+            android:clickable="true"
+            app:backgroundTint="#E64A19"
+            app:layout_anchor="@id/bottomAppBar3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.952"
+            app:srcCompat="@drawable/ic_baseline_add_24"
+            app:strokeWidth="2dp" />
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/bottomAppBar3"
+            style="@style/Widget.MaterialComponents.BottomAppBar.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:backgroundTint="@color/MAIN"
+            app:fabCradleMargin="15dp"
+            app:fabCradleRoundedCornerRadius="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/SETTINGS_BTN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:backgroundTint="@color/ACCENT"
+            android:drawableLeft="@drawable/ic_baseline_settings_24"
+            android:fontFamily="sans-serif-black"
+            android:text="Settings"
+            android:textColor="@color/TEXTCOLOR"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_anchor="@+id/bottomAppBar3"
+            app:layout_anchorGravity="start|center" />
+
+        <Button
+            android:id="@+id/PREVIEW_PR_VIDEO"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:backgroundTint="@color/ACCENT"
+            android:drawableRight="@drawable/ic_baseline_preview_24"
+            android:fontFamily="sans-serif-black"
+            android:text="Preview\nLifts"
+            android:textColor="@color/TEXTCOLOR"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_anchor="@+id/bottomAppBar3"
+            app:layout_anchorGravity="end|center" />
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

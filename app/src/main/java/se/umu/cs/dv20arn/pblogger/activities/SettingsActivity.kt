@@ -1,11 +1,13 @@
 package se.umu.cs.dv20arn.pblogger.activities
 
 import android.content.Context
+import android.content.Intent
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.Toast
+import se.umu.cs.dv20arn.pblogger.Main
 import se.umu.cs.dv20arn.pblogger.R
 import se.umu.cs.dv20arn.pblogger.databinding.ActivitySettingsBinding
 import se.umu.cs.dv20arn.pblogger.objects.Keys
@@ -27,10 +29,14 @@ class SettingsActivity : AppCompatActivity() {
         onUpdateSettings()
     }
 
+    /**
+     * Updates settings on click and returns user to Main activity.
+     */
     private fun onUpdateSettings() {
         binding.SAVESETTINGS.setOnClickListener {
             onSelectUserGender()
             onSelectUserBodyweight()
+            startActivity(Intent(this, Main::class.java))
         }
     }
     /**
@@ -44,15 +50,25 @@ class SettingsActivity : AppCompatActivity() {
             }
     }
 
+    /**
+     * Adds currently selected gender to sharedPreferences.
+     */
     private fun onSelectUserGender() {
         sharedPref.edit().putString(keys.USER_GENDER_KEY, binding.GENDERSPINNER.selectedItem as String).apply()
     }
 
+    /**
+     * Adds bodyweight to sharedPreferences.
+     */
     private fun onSelectUserBodyweight() {
         val bw = binding.BODYWEIGHTINPUT.text.toString().trim()
         if(bw == "") {
-            sharedPref.edit().putInt(keys.USER_BW_KEY, 80).apply()
-            Toast.makeText(this, "No weight input, default to 80kg.", Toast.LENGTH_SHORT).show()
+            if(sharedPref.getInt(keys.USER_BW_KEY, 0) > 0 ) {
+                Toast.makeText(this, "Weight not changed, ${sharedPref.getInt(keys.USER_BW_KEY, 0)}", Toast.LENGTH_SHORT).show()
+            } else {
+                sharedPref.edit().putInt(keys.USER_BW_KEY, 80).apply()
+                Toast.makeText(this, "No weight input, default to 80kg.", Toast.LENGTH_SHORT).show()
+            }
         } else {
             sharedPref.edit().putInt(keys.USER_BW_KEY, bw.toInt()).apply()
         }

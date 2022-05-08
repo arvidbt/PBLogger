@@ -7,6 +7,16 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="red">#DF3F3F</color>
+    <color name="red">#D34444</color>
     <color name="gray">#393838</color>
+    <color name="background_gray">#F5F5F5</color>
+    <color name="MAIN">#494F5F</color>
+    <color name="SECONDARY">#3C4252</color>
+    <color name="ACCENT">#D34444</color>
+    <color name="TEXTCOLOR">#BDBDBD</color>
+    <color name="HIGHLIGHT_TEXT">#353131</color>
+    <color name="ICONCOLOR">#FC7A56</color>
+    <color name="TROPHY">#FF9800</color>
+    <color name="FIRE">#F57C00</color>
+
 </resources>
